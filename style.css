@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,100;1,300;1,400&family=Mochiy+Pop+One&family=Outfit:wght@300;400;600&family=Waterfall&display=swap");
+:root {
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --mainBG: hsl(217, 54%, 11%);
+  --cardBG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --font-paragrapgh: 18px;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: var(--mainBG);
+  font-family: "Outfit", sans-serif;
+}
+.content {
+  position: relative;
+  color: var(--White);
+  background: var(--cardBG);
+  border-radius: 1rem;
+  padding: 1rem 0;
+  max-width: 380px;
+  box-shadow: 0 0 10px 15px rgb(0, 0, 0, 0.3);
+}
+.pic {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.5rem;
+}
+.pic .main {
+  max-width: 90%;
+  border-radius: 0.65rem;
+}
+.overlay {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  border-radius: 0.65rem;
+  opacity: 0;
+  background: hsla(178, 100%, 50%, 0.3);
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.discription {
+  padding: 0 1.5rem 1rem;
+}
+.name {
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+.name:hover {
+  color: var(--Cyan);
+}
+.discription p {
+  color: var(--Softblue);
+  font-size: var(--font-paragrapgh);
+  padding-bottom: 2rem;
+}
+.price {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.eth-icon {
+  color: var(--Cyan);
+}
+.eth-icon img {
+  position: relative;
+  right: 3%;
+  top: 15%;
+}
+.timer {
+  color: var(--Softblue);
+}
+.timer img {
+  position: relative;
+  right: 3%;
+  top: 12%;
+}
+.price::after {
+  content: "";
+  background: var(--line);
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 0.5px;
+  top: 3rem;
+}
+.avatar {
+  position: relative;
+  display: flex;
+  color: var(--Softblue);
+  padding-top: 2rem;
+  padding-left: 1.5rem;
+  align-items: center;
+}
+.avatar span {
+  color: var(--White);
+  cursor: pointer;
+}
+.avatar span:hover {
+  color: var(--Cyan);
+}
+.avatar img {
+  width: 10%;
+  border: solid 1px var(--White);
+  border-radius: 50%;
+}
+.avatar p {
+  padding-left: 1rem;
+  display: inline;
+  position: relative;
+}
+.attribution {
+  font-size: 15px;
+  color: var(--White);
+}
